@@ -6,20 +6,23 @@ class OcrController < ApplicationController
   
   def ocr
     result = ""
-    if params[:data]
-      session[:data] = session[:data] ? session[:data] + params[:data] : params[:data]
+    if params[:data].present?
+      session[params[:id]] ||= ""
+      session[params[:id]] += params[:data]
       render :json => "result = '';"
       return
       # session[:data] = session[:data] ? session[:data] + params[:data] : params[:data]
     else
-      file_name = request.session_options[:id] + '.jpg'
+      file_name = params[:id] + '.jpg'
       File.open(file_name, 'wb') do|f|
-        f.write(Base64.decode64(session[:data]))
+        f.write(Base64.decode64(session[params[:id]]))
         f.close
       end
       puts "test2"
       session[:data] = nil
+      puts file_name
       result = parse(file_name)
+      puts result
       
       # File.delete(file_name)
       puts "result:#{result}"
