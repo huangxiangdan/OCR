@@ -10,3 +10,6 @@ cd ~/downloads/ocr && tar xvzf ~/downloads/script/Dockerfiles/spiderman_base/dep
 cd ~/downloads/ocr && tar xvzf ~/downloads/script/Dockerfiles/spiderman_base/dependency/tesseract-ocr.tar.gz && cd tesseract-ocr && ./configure && sudo make && sudo make install
 sudo cp ~/downloads/ocr/tesseract-ocr/tessdata/eng.traineddata /usr/local/share/tessdata/
 
+
+
+if convert -v doesn't support png,jpg, then download  delegates from http://www.imagemagick.org/download/delegates/, install

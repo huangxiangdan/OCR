@@ -1,15 +1,13 @@
 # config valid only for Capistrano 3.1
 lock '3.1.0'
 
-set :application, 'my_app_name'
-set :repo_url, 'git@example.com:me/my_repo.git'
-
 set :branch, 'master'
 set :application, 'ocr'
+set :rails_env, "production"
 set :repo_url, 'git@github.com:huangxiangdan/OCR.git'
 set :deploy_to, "/var/www/#{fetch(:application)}/#{fetch(:rails_env)}"
 set :linked_dirs, %w{log}
-# set :linked_files, %w{config/database.yml .ruby-version}
+set :linked_files, %w{config/database.yml .ruby-version}
 set :whenever_identifier, ->{ "#{fetch(:application)}_#{fetch(:stage)}" }
 
 # Default branch is :master
