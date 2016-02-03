@@ -24,6 +24,14 @@ end
 
 gem 'jquery-rails'
 
+group :development do
+  gem "capistrano", "~> 3.1.0"
+  gem "capistrano-bundler", "~> 1.1.2"
+  gem "capistrano-rvm", "~> 0.1.1"
+  gem "capistrano-rails", "~> 1.1.1"
+  gem 'pry', '~> 0.9.12.3'
+end
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
