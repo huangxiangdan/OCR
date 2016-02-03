@@ -11,6 +11,8 @@ gem 'json'
 gem 'rtesseract'
 gem "mini_magick", "~> 3.6.0"
 gem 'rmagick'
+gem 'mechanize'
+gem 'redis'
 
 # Gems used only for assets and not required
 # in production environments by default.
