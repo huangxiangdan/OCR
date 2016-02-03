@@ -6,7 +6,7 @@ set :repo_url, 'git@example.com:me/my_repo.git'
 
 set :branch, 'master'
 set :application, 'ocr'
-set :repo_url, 'git@github.com:huangxiangdan/orc.git'
+set :repo_url, 'git@github.com:huangxiangdan/OCR.git'
 set :deploy_to, "/var/www/#{fetch(:application)}/#{fetch(:rails_env)}"
 set :linked_dirs, %w{log}
 set :linked_files, %w{config/database.yml .ruby-version}
